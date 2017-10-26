@@ -1,14 +1,14 @@
 # EPICS_GDAT
 
-## Speech Recognition
+## Speech Recognition - 11/16/17
 - Harjas
 - Farid
 
-## Bluetooth Interaction
+## Bluetooth Interaction - TBA
 - Siraj
 
-## Storage
+## Storage - 11/16/17
 - Sruthi
 
-## UI
+## UI - 11/30/17
 - Sruthi
