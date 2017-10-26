@@ -22,6 +22,8 @@ class SpeechViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     let audioEnginer = AVAudioEngine()
+    let speechRecognizerUS = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
+    let speechRecognizerIreland = SFSpeechRecognizer(locale: Locale.init(identifier: "en-IE"))
     @IBOutlet weak var speechRegOutput: UILabel!
     @IBAction func startSpeechReg(_ sender: UIButton) {
         print("starting speech recognition")
