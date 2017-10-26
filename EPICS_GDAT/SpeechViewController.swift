@@ -24,6 +24,8 @@ class SpeechViewController: UIViewController {
     let audioEnginer = AVAudioEngine()
     let speechRecognizerUS = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     let speechRecognizerIreland = SFSpeechRecognizer(locale: Locale.init(identifier: "en-IE"))
+    let request = SFSpeechAudioBufferRecognitionRequest()
+    
     @IBOutlet weak var speechRegOutput: UILabel!
     @IBAction func startSpeechReg(_ sender: UIButton) {
         print("starting speech recognition")
