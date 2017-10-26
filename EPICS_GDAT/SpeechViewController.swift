@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Speech
 
 class SpeechViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +21,7 @@ class SpeechViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    let audioEnginer = AVAudioEngine()
     @IBOutlet weak var speechRegOutput: UILabel!
     @IBAction func startSpeechReg(_ sender: UIButton) {
         print("starting speech recognition")
