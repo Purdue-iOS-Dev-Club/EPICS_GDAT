@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641C59CB1FA28CD4009CABC0 /* LocalStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641C59CA1FA28CD4009CABC0 /* LocalStorageViewController.swift */; };
 		C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */; };
 		C79D17C11FA2889C00D25C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17C01FA2889C00D25C4B /* ViewController.swift */; };
 		C79D17C41FA2889C00D25C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C21FA2889C00D25C4B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		641C59CA1FA28CD4009CABC0 /* LocalStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageViewController.swift; sourceTree = "<group>"; };
 		C79D17BB1FA2889C00D25C4B /* EPICS_GDAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICS_GDAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79D17C01FA2889C00D25C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */,
 				C79D17C01FA2889C00D25C4B /* ViewController.swift */,
+				641C59CA1FA28CD4009CABC0 /* LocalStorageViewController.swift */,
 				C79D17C21FA2889C00D25C4B /* Main.storyboard */,
 				C79D17C51FA2889C00D25C4B /* Assets.xcassets */,
 				C79D17C71FA2889C00D25C4B /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				C79D17C11FA2889C00D25C4B /* ViewController.swift in Sources */,
 				C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */,
+				641C59CB1FA28CD4009CABC0 /* LocalStorageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
