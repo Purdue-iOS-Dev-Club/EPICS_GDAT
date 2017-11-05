@@ -10,6 +10,15 @@ import UIKit
 
 class LocalStorageViewController: UIViewController {
 
+
+    @IBAction func onAddRoute(_ sender: Any) {
+        
+    }
+    @IBOutlet weak var bus1Label: UILabel!
+    @IBOutlet weak var bus2Label: UILabel!
+    @IBOutlet weak var bus3Label: UILabel!
+    @IBOutlet weak var bus4Label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
