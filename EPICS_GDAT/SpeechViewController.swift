@@ -9,38 +9,53 @@
 import UIKit
 import Speech
 
-class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
+class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, SpeechViewControllerDelegate {
     
+    let speechSynthesizer = AVSpeechSynthesizer()
     let audioEngine = AVAudioEngine()
     let speechRecognizer = SFSpeechRecognizer()
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
     var isActive = false
-    @IBOutlet weak var speechRegOutput: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    var currSpeech = ""
+    var routes: [Int] = []
+    var isPrompt = false
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var microphoneView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        speechSynthesizer.delegate = self
+        
+        microphoneView.layer.cornerRadius = 30
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func startSpeechReg(_ sender: UITapGestureRecognizer) {
+        if !isActive {
+            let speechUtterance = AVSpeechUtterance(string: "What would you like to do? You can say things like, add bus route 12, or remove bus route 12")
+            isPrompt = true
+            speechSynthesizer.speak(speechUtterance)
+        } else {
+            controlSpeech()
+        }
     }
     
-    @IBAction func startSpeechReg(_ sender: UIButton) {
-       controlSpeech()
+    func reload(routes: [Int]) {
+        self.routes = routes
+        collectionView.reloadData()
     }
+    
     
     func controlSpeech(){
         if !isActive {
             isActive = true
-            startButton.setTitle("Stop", for: .normal)
-            
+            microphoneView.backgroundColor = .red
             print("Starting speech recognition")
-            speechRegOutput.text = "started"
             let node = audioEngine.inputNode
             let recordingFormat = node.outputFormat(forBus: 0)
             node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
@@ -62,29 +77,139 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
             }
             recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
                 if let result = result {
-                    self.speechRegOutput.text = result.bestTranscription.formattedString
+                    self.currSpeech = result.bestTranscription.formattedString
                 } else if let error = error {
                     print(error)
                 }
             })
-        }else{
+        } else {
+            
+            microphoneView.backgroundColor = .blue
             isActive = false
             print("Stopping speech recoginition")
             recognitionTask?.finish()
             audioEngine.inputNode.removeTap(onBus: 0)
             audioEngine.stop()
-            startButton.setTitle("Start", for: .normal)
+            process()
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func process() {
+        print(currSpeech)
+        let speechParts = currSpeech.lowercased().split(separator: " ")
+        
+        switch speechParts[0] {
+        case "add":
+            var foundNum = false
+            for part in speechParts {
+                if let num = Int(part) {
+                    foundNum = true
+                    if !routes.contains(num) {
+                        routes.append(num)
+                        let speechUtterance = AVSpeechUtterance(string: "Bus route \(num) added to saved routes.")
+                        
+                        speechSynthesizer.speak(speechUtterance)
+                        
+                    } else {
+                        let speechUtterance = AVSpeechUtterance(string: "Bus route \(num) is already added.")
+                        
+                        speechSynthesizer.speak(speechUtterance)
+                    }
+                    collectionView.reloadData()
+                }
+            }
+            
+            if !foundNum {
+                understadingFail()
+            }
+        case "remove":
+            var foundNum = false
+            for part in speechParts {
+                if let num = Int(part) {
+                    foundNum = true
+                    if !routes.contains(num) {
+                        
+                        let speechUtterance = AVSpeechUtterance(string: "Bus route \(num) was not in your saved routes.")
+                        
+                        speechSynthesizer.speak(speechUtterance)
+                    } else {
+                        
+                        routes.remove(at: routes.index(of: num)!)
+                        let speechUtterance = AVSpeechUtterance(string: "Bus route \(num) removed")
+                        
+                        speechSynthesizer.speak(speechUtterance)
+                    }
+                    collectionView.reloadData()
+                }
+            }
+            
+            if !foundNum {
+                understadingFail()
+            }
+        case "select":
+            var foundNum = false
+            for part in speechParts {
+                if let num = Int(part) {
+                    foundNum = true
+                    let speechUtterance = AVSpeechUtterance(string: "Bus route \(num) selected.")
+                    
+                    speechSynthesizer.speak(speechUtterance)
+                    
+                }
+            }
+            
+            if !foundNum {
+                understadingFail()
+            }
+        default:
+            understadingFail()
+        }
     }
-    */
+    
+    func understadingFail() {
+        let speechUtterance = AVSpeechUtterance(string: "I didn't understand what you said, could you say that again?")
+        isPrompt = true
+        speechSynthesizer.speak(speechUtterance)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let id = segue.identifier else {
+            return
+        }
+        
+        switch id {
+        case "editSegue":
+            let destination = segue.destination as! EditViewController
+            destination.routes = routes
+            destination.delegate = self
+        default:
+            return
+        }
+    }
+}
 
+extension SpeechViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return routes.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "routeCell", for: indexPath) as! RouteCell
+        cell.routeLabel.text = String(routes[indexPath.row])
+        return cell
+    }
+}
+
+extension SpeechViewController: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        if isPrompt {
+            controlSpeech()
+            isPrompt = false
+        }
+    }
+}
+
+protocol SpeechViewControllerDelegate {
+    func reload(routes: [Int])
 }

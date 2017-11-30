@@ -10,7 +10,9 @@
 		C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */; };
 		C79D17C41FA2889C00D25C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C21FA2889C00D25C4B /* Main.storyboard */; };
 		C79D17C61FA2889C00D25C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C51FA2889C00D25C4B /* Assets.xcassets */; };
-		C79D17C91FA2889C00D25C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C71FA2889C00D25C4B /* LaunchScreen.storyboard */; };
+		C7ACFEA11FCFFB4800960CBC /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACFEA01FCFFB4800960CBC /* RouteCell.swift */; };
+		C7ACFEA31FCFFE7900960CBC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7ACFEA21FCFFE7900960CBC /* Launch Screen.storyboard */; };
+		C7F84B341FD0A4A0009C70D5 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F84B331FD0A4A0009C70D5 /* EditViewController.swift */; };
 		E3271F8C1FA28DFA0016E545 /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3271F8B1FA28DFA0016E545 /* SpeechViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -19,8 +21,10 @@
 		C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79D17C31FA2889C00D25C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C79D17C51FA2889C00D25C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C79D17C81FA2889C00D25C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C79D17CA1FA2889C00D25C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7ACFEA01FCFFB4800960CBC /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		C7ACFEA21FCFFE7900960CBC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C7F84B331FD0A4A0009C70D5 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		E3271F8B1FA28DFA0016E545 /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,8 +62,10 @@
 				C79D17C21FA2889C00D25C4B /* Main.storyboard */,
 				E3271F8B1FA28DFA0016E545 /* SpeechViewController.swift */,
 				C79D17C51FA2889C00D25C4B /* Assets.xcassets */,
-				C79D17C71FA2889C00D25C4B /* LaunchScreen.storyboard */,
 				C79D17CA1FA2889C00D25C4B /* Info.plist */,
+				C7ACFEA01FCFFB4800960CBC /* RouteCell.swift */,
+				C7ACFEA21FCFFE7900960CBC /* Launch Screen.storyboard */,
+				C7F84B331FD0A4A0009C70D5 /* EditViewController.swift */,
 			);
 			path = EPICS_GDAT;
 			sourceTree = "<group>";
@@ -123,7 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C79D17C91FA2889C00D25C4B /* LaunchScreen.storyboard in Resources */,
+				C7ACFEA31FCFFE7900960CBC /* Launch Screen.storyboard in Resources */,
 				C79D17C61FA2889C00D25C4B /* Assets.xcassets in Resources */,
 				C79D17C41FA2889C00D25C4B /* Main.storyboard in Resources */,
 			);
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F84B341FD0A4A0009C70D5 /* EditViewController.swift in Sources */,
 				E3271F8C1FA28DFA0016E545 /* SpeechViewController.swift in Sources */,
 				C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */,
+				C7ACFEA11FCFFB4800960CBC /* RouteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +158,6 @@
 				C79D17C31FA2889C00D25C4B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C79D17C71FA2889C00D25C4B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C79D17C81FA2889C00D25C4B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -275,7 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 947H8H8XTC;
+				DEVELOPMENT_TEAM = 3YC9K4952Y;
 				INFOPLIST_FILE = EPICS_GDAT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -291,7 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 947H8H8XTC;
+				DEVELOPMENT_TEAM = 3YC9K4952Y;
 				INFOPLIST_FILE = EPICS_GDAT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

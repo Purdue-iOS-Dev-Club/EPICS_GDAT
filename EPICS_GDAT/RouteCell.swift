@@ -9,5 +9,5 @@
 import UIKit
 
 class RouteCell: UICollectionViewCell {
-    
+    @IBOutlet weak var routeLabel: UILabel!
 }
