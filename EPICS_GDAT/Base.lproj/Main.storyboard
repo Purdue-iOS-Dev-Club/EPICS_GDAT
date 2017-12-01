@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Vibration-->
         <scene sceneID="an3-W2-fXj">
@@ -105,16 +110,16 @@
             </objects>
             <point key="canvasLocation" x="193" y="1200"/>
         </scene>
-        <!--Settings-->
+        <!--View Controller-->
         <scene sceneID="rAD-Bc-TI9">
             <objects>
-                <viewController title="Settings" id="bHf-IZ-5r7" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="bHf-IZ-5r7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WIt-o1-X2J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-Ba-seU">
-                                <rect key="frame" x="-3" y="134" width="412" height="87"/>
+                                <rect key="frame" x="-3" y="183" width="412" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99998784065246582" blue="0.9999920129776001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" backgroundImage="Screen Shot 2017-12-01 at 4.19.16 PM"/>
@@ -123,7 +128,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-nI-FOg">
-                                <rect key="frame" x="0.0" y="64" width="412" height="82"/>
+                                <rect key="frame" x="0.0" y="113" width="412" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90982460975646973" green="0.9098050594329834" blue="0.90980887413024902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" backgroundImage="Screen Shot 2017-12-01 at 4.10.06 PM"/>
@@ -132,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWW-ou-MTC">
-                                <rect key="frame" x="-3" y="308" width="412" height="78"/>
+                                <rect key="frame" x="-3" y="357" width="412" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2017-12-01 at 4.06.32 PM"/>
                                 <connections>
@@ -140,18 +145,31 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-Wu-aeP">
-                                <rect key="frame" x="-3" y="229" width="412" height="85"/>
+                                <rect key="frame" x="-3" y="278" width="412" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2017-12-01 at 4.06.21 PM"/>
                                 <connections>
                                     <segue destination="2Dg-DF-Qyu" kind="show" id="zzd-hv-w88"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKT-X7-61J">
+                                <rect key="frame" x="136" y="33" width="134" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-GV-o9B">
+                                <rect key="frame" x="31" y="40" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backarrow"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Uzc-mC-CLg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="iAU-ye-tgy"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iAU-ye-tgy"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSn-yS-CyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +180,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O6E-2Z-TzP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uAD-25-kQC">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uAD-25-kQC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -175,25 +193,12 @@
             </objects>
             <point key="canvasLocation" x="-1098" y="492"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VnH-PC-Nbr">
-            <objects>
-                <viewController id="7dd-KR-O1I" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="myd-9d-xDW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="P4e-Cd-9nh"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="23M-8H-dZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Screen Shot 2017-12-01 at 4.06.21 PM" width="668" height="136"/>
         <image name="Screen Shot 2017-12-01 at 4.06.32 PM" width="668" height="124"/>
         <image name="Screen Shot 2017-12-01 at 4.10.06 PM" width="550" height="106"/>
         <image name="Screen Shot 2017-12-01 at 4.19.16 PM" width="668" height="132"/>
+        <image name="backarrow" width="225" height="225"/>
     </resources>
 </document>
