@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640719C91FD20CDA00C61C94 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640719C81FD20CDA00C61C94 /* HelpViewController.swift */; };
+		640719CB1FD20CEF00C61C94 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640719CA1FD20CEF00C61C94 /* LanguageViewController.swift */; };
+		640719CD1FD20CF800C61C94 /* VibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640719CC1FD20CF800C61C94 /* VibrationViewController.swift */; };
+		640719CF1FD20D0B00C61C94 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640719CE1FD20D0B00C61C94 /* FAQViewController.swift */; };
 		C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */; };
 		C79D17C11FA2889C00D25C4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */; };
 		C79D17C41FA2889C00D25C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C21FA2889C00D25C4B /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640719C81FD20CDA00C61C94 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		640719CA1FD20CEF00C61C94 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		640719CC1FD20CF800C61C94 /* VibrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationViewController.swift; sourceTree = "<group>"; };
+		640719CE1FD20D0B00C61C94 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		C79D17BB1FA2889C00D25C4B /* EPICS_GDAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICS_GDAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 				C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */,
 				C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */,
 				C79D17C21FA2889C00D25C4B /* Main.storyboard */,
+				640719CA1FD20CEF00C61C94 /* LanguageViewController.swift */,
+				640719CC1FD20CF800C61C94 /* VibrationViewController.swift */,
+				640719CE1FD20D0B00C61C94 /* FAQViewController.swift */,
+				640719C81FD20CDA00C61C94 /* HelpViewController.swift */,
 				C79D17C51FA2889C00D25C4B /* Assets.xcassets */,
 				C79D17C71FA2889C00D25C4B /* LaunchScreen.storyboard */,
 				C79D17CA1FA2889C00D25C4B /* Info.plist */,
@@ -137,6 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C79D17C11FA2889C00D25C4B /* SettingsViewController.swift in Sources */,
+				640719C91FD20CDA00C61C94 /* HelpViewController.swift in Sources */,
+				640719CB1FD20CEF00C61C94 /* LanguageViewController.swift in Sources */,
+				640719CF1FD20D0B00C61C94 /* FAQViewController.swift in Sources */,
+				640719CD1FD20CF800C61C94 /* VibrationViewController.swift in Sources */,
 				C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
