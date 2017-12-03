@@ -1,5 +1,5 @@
 //
-//  LanguageViewController.swift
+//  LanguageViewController.swiftLanguageViewController
 //  EPICS_GDAT
 //
 //  Created by Sruthi Pillai on 12/1/17.
@@ -9,7 +9,20 @@
 import UIKit
 
 class LanguageViewController: UIViewController {
-
+   
+    
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     @IBAction func backButton(_ sender: Any) {
       
@@ -17,17 +30,7 @@ class LanguageViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -38,5 +41,5 @@ class LanguageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
