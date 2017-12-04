@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class VibrationViewController: UIViewController {
 
+    @IBAction func onTapped(_ sender: Any) {
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+    }
+  
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)

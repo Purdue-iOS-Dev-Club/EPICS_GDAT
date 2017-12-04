@@ -11,6 +11,7 @@
 		640719CD1FD20CF800C61C94 /* VibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640719CC1FD20CF800C61C94 /* VibrationViewController.swift */; };
 		64D0806A1FD3713300C15354 /* LanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D080691FD3713300C15354 /* LanguageTableViewController.swift */; };
 		64D0806C1FD48A2A00C15354 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0806B1FD48A2A00C15354 /* FAQTableViewController.swift */; };
+		64D0806E1FD4EDF900C15354 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0806D1FD4EDF900C15354 /* RoundButton.swift */; };
 		C79D17BF1FA2889C00D25C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */; };
 		C79D17C11FA2889C00D25C4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */; };
 		C79D17C41FA2889C00D25C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79D17C21FA2889C00D25C4B /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		640719CC1FD20CF800C61C94 /* VibrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationViewController.swift; sourceTree = "<group>"; };
 		64D080691FD3713300C15354 /* LanguageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewController.swift; sourceTree = "<group>"; };
 		64D0806B1FD48A2A00C15354 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
+		64D0806D1FD4EDF900C15354 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		C79D17BB1FA2889C00D25C4B /* EPICS_GDAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICS_GDAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				C79D17BE1FA2889C00D25C4B /* AppDelegate.swift */,
 				C79D17C01FA2889C00D25C4B /* SettingsViewController.swift */,
 				C79D17C21FA2889C00D25C4B /* Main.storyboard */,
+				64D0806D1FD4EDF900C15354 /* RoundButton.swift */,
 				64D0806B1FD48A2A00C15354 /* FAQTableViewController.swift */,
 				640719CC1FD20CF800C61C94 /* VibrationViewController.swift */,
 				640719C81FD20CDA00C61C94 /* HelpViewController.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				64D0806A1FD3713300C15354 /* LanguageTableViewController.swift in Sources */,
 				C79D17C11FA2889C00D25C4B /* SettingsViewController.swift in Sources */,
+				64D0806E1FD4EDF900C15354 /* RoundButton.swift in Sources */,
 				640719C91FD20CDA00C61C94 /* HelpViewController.swift in Sources */,
 				640719CD1FD20CF800C61C94 /* VibrationViewController.swift in Sources */,
 				64D0806C1FD48A2A00C15354 /* FAQTableViewController.swift in Sources */,
