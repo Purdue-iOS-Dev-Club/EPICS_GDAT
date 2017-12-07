@@ -26,6 +26,15 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, Speech
     
     
     override func viewDidLoad() {
+        if !UserDefaults.standard.bool(forKey: "launchedBefore") {
+            if let arriveMenuController = storyboard?.instantiateViewController(withIdentifier: ArriveMenuController.className) as? ArriveMenuController {
+                self.present(arriveMenuController, animated: true, completion: {
+                    UserDefaults.standard.set(true, forKey: "launchedBefore")
+                    UserDefaults.standard.synchronize()
+                })
+            }
+        }
+
         super.viewDidLoad()
         
         collectionView.delegate = self
